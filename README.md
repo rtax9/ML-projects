@@ -11,6 +11,7 @@ __1. Deep Learning Project : GAN for generating handwritten images using MNIST D
     To train a DCGAN (Deep Convolutional Generative Adversarian Network) to generate handwritten images.
 
     - Description: 
+    
         1. We use a GAN (Generative Adversarial neural Network) comprising of two deep convolutional networks
         
             A. GENERATOR for upsampling the data from noise to a AI generated 28x28 image)
@@ -28,6 +29,30 @@ __1. Deep Learning Project : GAN for generating handwritten images using MNIST D
         2. We use a kernel size of 5x5 for the generator and discriminator
         
         3. Loss function : BCE (Binary Cross Entropy)
+
+    - Tasks Performed:
+    
+        1. Built a GAN model comprising of two separate and independant concolutional neural networks, namely
+            
+            - the Generator : to generate images 
+            - the Discriminator : to distinguish a generated image from a real image 
+            
+        2. Defined Loss Functions for the Generator and the Discriminator
+
+        3. Create a traning function to do the following:
+            a. start by sampling a random normal noise vector
+            b. generating an image (Xgen) by passing the noise to the generator
+            c. pass the generated image (Xgen) along with the real image (Xreal) into the discriminator
+            d. compute generator loss, L_g, and the total discriminator loss, L_d by comparing the output of the discriminator to the real and fake images. 
+            e. compute gradients for the generator and the discriminator using the loss computed above
+            f. update the generator and discriminator optimizers defined above (gen_opt and dis_opt) using the gradients 
+
+        4. Compute the Error Rate/Accuracy of the entire model
+
+        5. Hyperparameter Tuning
+            - No. of Epochs Vs Error Rate
+            - Batch Size Vs Error Rate
+            - Noise Vs Error Rate
 
 __2. Supervised Learning- Classification : FDA_Drug_Classification__
 
